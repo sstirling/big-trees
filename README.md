@@ -126,6 +126,20 @@ Many of these trees stand on private property. The two states handle privacy dif
 
 If you visit a tree, be respectful — view from a public sidewalk or right-of-way unless you have explicit permission.
 
+## Social cards
+
+The site ships with an Open Graph / Twitter share card at `og/site.jpg` (1200×630, ~190 KB). When someone shares the homepage on Twitter, Slack, iMessage, Facebook, LinkedIn, etc., the preview shows the Belvidere Sycamore as the background with the "716 trees, ranked by size" headline overlay.
+
+To regenerate the card after changing the template or the source photo:
+
+```bash
+.venv/bin/python scripts/build_og_cards.py
+```
+
+The script renders every `og/template-*.html` via headless Chrome (1200×630) and saves an optimized JPEG to `og/{name}.jpg`. To add another card variant (e.g., a per-tree share card later), drop a new `og/template-foo.html` and rerun.
+
+The OG / Twitter meta tags in `index.html` point at the deployed URL — update them if you fork the repo to a different GitHub Pages path.
+
 ## PA tab — currently gated off in the live build
 
 The PA tab is hidden from the live site pending an outreach response from the Pennsylvania Forestry Association (see `OUTREACH-PA.md`). The PA data, photos, scripts, and frontend code all remain in this repo and continue to work locally. Re-enable by editing one line in `app.js`:

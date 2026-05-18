@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OG card — Big Trees of NJ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400;9..144,700;9..144,900;9..144,900..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      font-family: "Inter", system-ui, sans-serif;
+      color: white;
+      background: #143829;
+    }
+    .photo {
+      position: absolute;
+      inset: 0;
+      background-image: url('../photos/nj/144/1.jpg');
+      background-size: cover;
+      /* The Belvidere Sycamore photo has a red barn on the right. Shift the
+         focal point so the tree's canopy is the dominant element. */
+      background-position: 30% 45%;
+      transform: scale(1.05);
+      filter: saturate(1.05);
+    }
+    .scrim {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(20, 56, 41, 0.1) 0%, rgba(20, 56, 41, 0.55) 55%, rgba(10, 30, 22, 0.95) 100%),
+        linear-gradient(90deg, rgba(10, 30, 22, 0.5) 0%, rgba(10, 30, 22, 0) 40%);
+    }
+    .content {
+      position: absolute;
+      left: 60px;
+      right: 60px;
+      bottom: 56px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 16px 8px 12px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 999px;
+      font-family: "Inter", sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: white;
+      backdrop-filter: blur(8px);
+      margin-bottom: 26px;
+    }
+    .brand svg {
+      width: 22px;
+      height: 22px;
+      color: #f4b942;
+    }
+    .brand__tag {
+      padding: 3px 9px;
+      background: #e0813a;
+      color: white;
+      border-radius: 999px;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      margin-left: 4px;
+    }
+    h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 900;
+      font-variation-settings: "opsz" 144, "SOFT" 60;
+      font-size: 96px;
+      line-height: 0.96;
+      letter-spacing: -0.025em;
+      margin: 0 0 18px;
+      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.55);
+    }
+    .count {
+      color: #f4b942;
+      font-size: 132px;
+      line-height: 0.85;
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .lede {
+      display: block;
+      font-size: 80px;
+    }
+    .sub {
+      font-family: "Inter", sans-serif;
+      font-size: 26px;
+      font-weight: 500;
+      line-height: 1.3;
+      max-width: 920px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.92);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    }
+    .source {
+      position: absolute;
+      top: 38px;
+      right: 50px;
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.78);
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="photo"></div>
+  <div class="scrim"></div>
+  <p class="source">Data: NJ DEP Big and Heritage Trees</p>
+  <div class="content">
+    <div class="brand">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M20 4 C12 4 6 12 10 20 C4 22 4 32 14 32 L26 32 C36 32 36 22 30 20 C34 12 28 4 20 4 Z" fill="currentColor"/>
+        <rect x="18" y="30" width="4" height="8" fill="currentColor"/>
+      </svg>
+      Big Trees<span class="brand__tag">NJ</span>
+    </div>
+    <h1>
+      <span class="count">716</span>
+      <span class="lede">trees, ranked by size.</span>
+    </h1>
+    <p class="sub">Every champion, heritage, and signature tree on the NJ DEP Big and Heritage Trees registry — with photos and how to find the ones you can visit.</p>
+  </div>
+</body>
+</html>
