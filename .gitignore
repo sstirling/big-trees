@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 .DS_Store
 scripts/.cache/
+
+# Operational notes that shouldn't ship publicly
+OUTREACH-PA.md

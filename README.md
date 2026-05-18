@@ -2,7 +2,7 @@
 
 A browsable, ranked guide to every champion, heritage, and signature tree on New Jersey's official big-tree registry. Photos, stats, and directions to the ones you can visit, plus suggested half-day driving routes.
 
-**Live site:** https://stephenstirling.github.io/big-trees/
+**Live site:** https://sstirling.github.io/big-trees/
 
 > _This site was built with the assistance of [Claude Code](https://claude.com/claude-code)._
 
@@ -46,7 +46,7 @@ big-trees/
 You need Python 3.10+ and ~200 MB of disk for the resized photos.
 
 ```bash
-git clone https://github.com/stephenstirling/big-trees.git
+git clone https://github.com/sstirling/big-trees.git
 cd big-trees
 
 python3 -m venv .venv
