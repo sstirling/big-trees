@@ -1,0 +1,30 @@
+[
+  {
+    "idx": 1,
+    "original_name": "magnolia 5.jpg",
+    "is_certificate": false,
+    "main": "1.jpg",
+    "thumb": "1-thumb.jpg"
+  },
+  {
+    "idx": 2,
+    "original_name": "1664151104220-IMG_8051.JPG",
+    "is_certificate": false,
+    "main": "2.jpg",
+    "thumb": "2-thumb.jpg"
+  },
+  {
+    "idx": 3,
+    "original_name": "1664151117768-IMG_8048.JPG",
+    "is_certificate": false,
+    "main": "3.jpg",
+    "thumb": "3-thumb.jpg"
+  },
+  {
+    "idx": 4,
+    "original_name": "1664151136704-IMG_8070.JPG",
+    "is_certificate": false,
+    "main": "4.jpg",
+    "thumb": "4-thumb.jpg"
+  }
+]

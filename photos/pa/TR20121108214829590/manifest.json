@@ -1,0 +1,37 @@
+[
+  {
+    "idx": 1,
+    "original_name": "carya glabra reading scale 2012.jpg",
+    "is_certificate": false,
+    "main": "1.jpg",
+    "thumb": "1-thumb.jpg"
+  },
+  {
+    "idx": 2,
+    "original_name": "carya glabra reading full 2012.jpg",
+    "is_certificate": false,
+    "main": "2.jpg",
+    "thumb": "2-thumb.jpg"
+  },
+  {
+    "idx": 3,
+    "original_name": "1696206566685-IMG_3255.jpeg",
+    "is_certificate": false,
+    "main": "3.jpg",
+    "thumb": "3-thumb.jpg"
+  },
+  {
+    "idx": 4,
+    "original_name": "1696206566689-IMG_3258.jpeg",
+    "is_certificate": false,
+    "main": "4.jpg",
+    "thumb": "4-thumb.jpg"
+  },
+  {
+    "idx": 5,
+    "original_name": "1696206566691-IMG_3257.jpeg",
+    "is_certificate": false,
+    "main": "5.jpg",
+    "thumb": "5-thumb.jpg"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "idx": 1,
+    "original_name": "Juniperus virginiana washington crossing house 60s",
+    "is_certificate": false,
+    "main": "1.jpg",
+    "thumb": "1-thumb.jpg"
+  },
+  {
+    "idx": 2,
+    "original_name": "1701290099232-64021046-BFE1-48CB-BF68-8E48D4D43375.jpeg",
+    "is_certificate": false,
+    "main": "2.jpg",
+    "thumb": "2-thumb.jpg"
+  },
+  {
+    "idx": 3,
+    "original_name": "1701290099304-E80855B6-787A-4D61-A8E9-6676A73085E6.jpeg",
+    "is_certificate": false,
+    "main": "3.jpg",
+    "thumb": "3-thumb.jpg"
+  }
+]

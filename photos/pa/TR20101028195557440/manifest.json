@@ -1,0 +1,30 @@
+[
+  {
+    "idx": 1,
+    "original_name": "1672968531435-IMG_8941.JPG",
+    "is_certificate": false,
+    "main": "1.jpg",
+    "thumb": "1-thumb.jpg"
+  },
+  {
+    "idx": 2,
+    "original_name": "1672968531438-IMG_8942.JPG",
+    "is_certificate": false,
+    "main": "2.jpg",
+    "thumb": "2-thumb.jpg"
+  },
+  {
+    "idx": 3,
+    "original_name": "1672968531442-IMG_8943.JPG",
+    "is_certificate": false,
+    "main": "3.jpg",
+    "thumb": "3-thumb.jpg"
+  },
+  {
+    "idx": 4,
+    "original_name": "1672968531446-IMG_8944.JPG",
+    "is_certificate": false,
+    "main": "4.jpg",
+    "thumb": "4-thumb.jpg"
+  }
+]

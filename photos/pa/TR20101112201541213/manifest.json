@@ -1,0 +1,23 @@
+[
+  {
+    "idx": 1,
+    "original_name": "1673022502427-0F80C93F-8AB0-419B-9EB9-45AB0D283F17.jpeg",
+    "is_certificate": false,
+    "main": "1.jpg",
+    "thumb": "1-thumb.jpg"
+  },
+  {
+    "idx": 2,
+    "original_name": "1673022722606-49C412F7-F177-49E3-9569-9938DDEDD543.jpeg",
+    "is_certificate": false,
+    "main": "2.jpg",
+    "thumb": "2-thumb.jpg"
+  },
+  {
+    "idx": 3,
+    "original_name": "1673022722611-FED062FC-E87B-4BB5-AE7C-F3CD1AB5FCD8.jpeg",
+    "is_certificate": false,
+    "main": "3.jpg",
+    "thumb": "3-thumb.jpg"
+  }
+]

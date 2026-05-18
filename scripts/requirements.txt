@@ -1,0 +1,5 @@
+requests>=2.31
+Pillow>=10.0
+# geopandas + shapely only used by build_centroids.py
+geopandas>=0.14
+shapely>=2.0

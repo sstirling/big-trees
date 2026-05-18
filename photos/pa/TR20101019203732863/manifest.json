@@ -1,0 +1,23 @@
+[
+  {
+    "idx": 1,
+    "original_name": "magnolia 9.jpg",
+    "is_certificate": false,
+    "main": "1.jpg",
+    "thumb": "1-thumb.jpg"
+  },
+  {
+    "idx": 2,
+    "original_name": "2015-04-18 11.23.47.jpg",
+    "is_certificate": false,
+    "main": "2.jpg",
+    "thumb": "2-thumb.jpg"
+  },
+  {
+    "idx": 3,
+    "original_name": "1611624503111-magnolia denudata tyler 2021.jpg",
+    "is_certificate": false,
+    "main": "3.jpg",
+    "thumb": "3-thumb.jpg"
+  }
+]

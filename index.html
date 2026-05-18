@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Big trees of New Jersey, ranked</title>
+  <meta name="description" content="A browsable, ranked guide to every champion, heritage, and signature tree on the NJ DEP Big and Heritage Trees registry — with photos and field-trip routes to find them.">
+  <meta property="og:title" content="Big trees of New Jersey, ranked">
+  <meta property="og:description" content="Every tree on NJ DEP's Big and Heritage Trees registry, ranked by size — with photos, directions, and field-trip routes.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400;9..144,700;9..144,900;9..144,900..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a href="#top" class="site-header__brand">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M20 4 C12 4 6 12 10 20 C4 22 4 32 14 32 L26 32 C36 32 36 22 30 20 C34 12 28 4 20 4 Z" fill="currentColor"/>
+          <rect x="18" y="30" width="4" height="8" fill="currentColor"/>
+        </svg>
+        <span>Big Trees<span class="brand-mark__tag">NJ</span></span>
+      </a>
+      <nav class="site-header__nav">
+        <a href="#top10">Top 10</a>
+        <a href="#ranking">All trees</a>
+        <a href="#trips" id="nav-trips" hidden>Field trips</a>
+        <a href="#methodology">Methodology</a>
+      </nav>
+    </div>
+    <div class="state-tabs" role="tablist" aria-label="Choose a state">
+      <div class="wrap state-tabs__inner">
+        <button type="button" role="tab" class="state-tab is-active" data-state="nj" aria-selected="true">
+          <span class="state-tab__name">New Jersey</span>
+          <span class="state-tab__count" data-state-count="nj">716</span>
+        </button>
+        <button type="button" role="tab" class="state-tab" data-state="pa" aria-selected="false">
+          <span class="state-tab__name">Pennsylvania</span>
+          <span class="state-tab__count" data-state-count="pa">1,833</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero__inner">
+        <p class="kicker" id="hero-kicker">A field guide to the registry</p>
+        <h1 class="hero__title">
+          <span class="hero__count" id="hero-count">716</span>
+          <span class="hero__lede" id="hero-lede">of New Jersey's biggest trees, ranked by size.</span>
+        </h1>
+        <p class="hero__sub" id="hero-sub">
+          Every champion, heritage, and signature tree on the NJ DEP Big and Heritage Trees registry — with photos and how to find the ones you can visit.
+        </p>
+        <p class="hero__meta">
+          Source: <a id="hero-source-link" href="https://dep.nj.gov/parksandforests/conservation/big-heritage-trees/" target="_blank" rel="noopener">NJ DEP Big and Heritage Trees Program</a>. Updated <span id="updated-at">—</span>.
+        </p>
+        <div id="credit-callout" class="credit-callout" hidden></div>
+      </div>
+      <svg class="hero__leaf" viewBox="0 0 200 200" aria-hidden="true">
+        <path d="M100 10 C40 10 20 80 30 130 C40 170 80 190 100 190 C120 190 160 170 170 130 C180 80 160 10 100 10 Z M100 30 L100 180 M70 70 L100 100 M130 70 L100 100 M60 110 L100 140 M140 110 L100 140" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    </section>
+
+    <section class="top10" id="top10" aria-labelledby="top10-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">The leaderboard</p>
+          <h2 id="top10-title">The 10 biggest trees</h2>
+          <p class="section-head__sub">Scored by trunk circumference, height, and crown spread. The bigger the number, the bigger the tree.</p>
+        </header>
+        <ol class="top10__list" id="top10-list"></ol>
+      </div>
+    </section>
+
+    <section class="ranking" id="ranking" aria-labelledby="ranking-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">All <span id="all-count">716</span> trees</p>
+          <h2 id="ranking-title">The full registry</h2>
+          <p class="section-head__sub">Filter by status, county, or species. Click any card to see photos, stats, and a map to find it.</p>
+        </header>
+
+        <form class="filters" id="filters" role="search" aria-label="Filter trees">
+          <label class="filters__search">
+            <span class="sr-only">Search by species</span>
+            <input type="search" id="search" placeholder="Search species (e.g. White Oak)" autocomplete="off">
+          </label>
+          <div class="filters__row" id="status-chips" role="group" aria-label="Status filter">
+            <!-- chips rendered by app.js based on active state -->
+          </div>
+          <div class="filters__row filters__row--secondary">
+            <label class="filters__select">
+              <span>County</span>
+              <select id="county-filter">
+                <option value="">All counties</option>
+              </select>
+            </label>
+            <label class="filters__toggle">
+              <input type="checkbox" id="photos-only">
+              <span>Has photos</span>
+            </label>
+            <p class="filters__count" id="filter-count" aria-live="polite">716 trees</p>
+          </div>
+        </form>
+
+        <div class="grid" id="grid" role="list"></div>
+        <p class="grid__empty" id="grid-empty" hidden>No trees match those filters.</p>
+      </div>
+    </section>
+
+    <section class="trips" id="trips" aria-labelledby="trips-title" hidden>
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">Big-tree road trips</p>
+          <h2 id="trips-title">Field trips through New Jersey's biggest trees</h2>
+          <p class="section-head__sub">Each route is a one-way drive of roughly an hour or two through 4-5 nearby trees on the registry. Each stop is labeled with how you can actually see the tree — most are on private property, viewable only from public sidewalks.</p>
+        </header>
+        <form class="trip-filters" role="search" aria-label="Filter trips by region">
+          <div class="filters__row" id="region-chips" role="group" aria-label="Region filter">
+            <!-- region chips rendered by app.js -->
+          </div>
+        </form>
+        <div class="trip-grid" id="trip-grid" role="list"></div>
+        <p class="grid__empty" id="trip-grid-empty" hidden>No trips in this region yet.</p>
+      </div>
+    </section>
+
+    <section class="methodology" id="methodology" aria-labelledby="methodology-title">
+      <div class="wrap methodology__inner">
+        <h2 id="methodology-title">How this works</h2>
+        <div class="methodology__cols">
+          <div id="methodology-data">
+            <h3>The data</h3>
+            <!-- filled by app.js per active state -->
+          </div>
+          <div>
+            <h3>The score</h3>
+            <p>Both states follow the American Forests big-tree formula:</p>
+            <p class="formula">circumference (in.) + height (ft.) + ¼ × crown average (ft.)</p>
+            <p>The result is the <strong>Points</strong> value on each card. Higher means a bigger tree. A tree can be the biggest of its species in its state (a Champion) without ranking near the top overall — small species don't compete with sycamores.</p>
+          </div>
+          <div id="methodology-status">
+            <h3>Status terms</h3>
+            <!-- filled by app.js per active state -->
+          </div>
+          <div id="methodology-privacy">
+            <h3>Privacy & access</h3>
+            <!-- filled by app.js per active state -->
+          </div>
+        </div>
+        <p class="methodology__byline">By <a href="https://github.com/stephenstirling" target="_blank" rel="noopener">Stephen Stirling</a>. Open source on <a href="https://github.com/stephenstirling/big-trees" target="_blank" rel="noopener">GitHub</a>. Not affiliated with NJ DEP.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Data: NJ DEP Big and Heritage Trees Program · Snapshot updated <span class="updated-at">—</span></p>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <article class="modal__panel">
+      <button class="modal__close" type="button" data-close aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 L19 19 M19 5 L5 19" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </button>
+      <div class="modal__body" id="modal-body"></div>
+    </article>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>

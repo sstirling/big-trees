@@ -1,0 +1,23 @@
+[
+  {
+    "idx": 1,
+    "original_name": "1701620137977-1696259015656-20231002_101234.jpg",
+    "is_certificate": false,
+    "main": "1.jpg",
+    "thumb": "1-thumb.jpg"
+  },
+  {
+    "idx": 2,
+    "original_name": "1701620140443-1696259015705-20231002_101216.jpg",
+    "is_certificate": false,
+    "main": "2.jpg",
+    "thumb": "2-thumb.jpg"
+  },
+  {
+    "idx": 3,
+    "original_name": "1701620145897-1696259015410-20231002_101849.jpg",
+    "is_certificate": false,
+    "main": "3.jpg",
+    "thumb": "3-thumb.jpg"
+  }
+]
