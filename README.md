@@ -4,6 +4,8 @@ A browsable, ranked guide to every champion, heritage, and signature tree on New
 
 **Live site:** https://stephenstirling.github.io/big-trees/
 
+> _This site was built with the assistance of [Claude Code](https://claude.com/claude-code)._
+
 ## What this is
 
 The NJ DEP maintains an official registry of the state's largest trees, scored by the American Forests big-tree formula (circumference + height + ¼ × crown spread). They publish the data through an ArcGIS map but there's no easy way to scroll through the list, look at photos, rank trees by size, or plan a trip around them.
